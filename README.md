@@ -5,7 +5,7 @@ This project is based on generating a Merit List for the Indian Navy SSR (Senior
 
 The aim of the project was to prepare a final merit list of 2800 selected candidates from a dataset of over 40,000 applicants, using a combination of Python (Pandas), SQL (MySQL), and data analysis techniques.
 
-Tools and Technologies UseD
+Tools and Technologies Used
 - Python (Pandas, NumPy)
 - SQL (MySQL)
 - SQLAlchemy (for connecting Python with MySQL)
@@ -13,8 +13,7 @@ Tools and Technologies UseD
 - CSV for data storage and transfer
   
 Data Processing Steps
- Data Import to MySQL:
-
+Data Import to MySQL:
 The dataset  was first imported into a MySQL table using SQLAlchemy after formatting the DOB field to the YYYY-MM-DD format.
 
 Filtering in MySQL:
@@ -29,18 +28,19 @@ State-wise seat allocation was done using percentile-based cutoffs.
 A custom cutoff dictionary was created based on percentile analysis for each state.
 Candidates were selected for the 2800 vacancies based on these cutoffs.
 
-Merit List Generation Logic
+Merit List Generation Logic:
+
 Sorting Criteria for Tie-Breakers:
-Older Age Preference (based on Date of Birth)
-Higher Maths Marks
-Higher Physics Marks
-Higher English Marks
-Higher GK Marks
+Older Age Preference (based on Date of Birth),
+Higher Maths Marks,
+Higher Physics Marks,
+Higher English Marks,
+Higher GK Marks,
 
 The data was sorted based on the above preferences using Pandas' sort_values() method.
 In case of a tie and limited seat availability, the candidate meeting the above priorities was selected.
 
-Final Output
+Final Output:
 A final merit list of 2800 candidates was successfully generated.
 The project simulates a real-world recruitment scenario by applying data filtering, ranking logic, and fair tie-breaker rules.
 The end result is a reproducible and transparent selection process using Python and SQL.
